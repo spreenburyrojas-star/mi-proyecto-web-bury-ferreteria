@@ -1,0 +1,166 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    background-color: #b30000;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Buscador */
+#buscador-container {
+    padding: 10px;
+    text-align: center;
+}
+
+#buscador {
+    padding: 5px;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Secciones */
+.seccion {
+    padding: 20px;
+    border-bottom: 2px solid #b30000;
+}
+
+/* Productos */
+.producto {
+    background-color: #222;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.add-cart {
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.add-cart:hover {
+    background-color: #ff0000;
+}
+
+/* Carrito estilo “carrito de compras” */
+#carrito {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #b30000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: width 0.3s, height 0.3s;
+}
+
+#carrito.open {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#carrito img {
+    width: 35px;
+    height: 35px;
+}
+
+#carrito h3 {
+    display: none;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+#carrito.open h3 {
+    display: block;
+    text-align: center;
+}
+
+#carrito ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 5px;
+}
+
+#carrito.open ul {
+    display: block;
+}
+
+#carrito button {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#carrito.open button {
+    display: block;
+}
+
+#carrito .cantidad {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
